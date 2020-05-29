@@ -68,8 +68,9 @@ def readResourceFile():
             try:
                 key = re.search('<string name=\"(.+?)\"', line).group(1)
             except AttributeError:
-                continue
                 print "Markers not found for line: " + line
+                continue
+                
             newLine = {"key": key, "line": line}
             lines.append(newLine)
 
